@@ -1,3 +1,5 @@
+//sending msg from A to shaper in variable bitrate and then from shaper to B using constant bitrate.
+// A self token will be sent to shaper, then the msgs will be sent from shaper to B.
 #include <stdio.h>
 #include <string.h>
 #include <omnetpp.h>
