@@ -1,1 +1,5 @@
 Abstract the topology shown in Figure below. Station-A is sending packets towards Station-B via the Traffic Shaper. The traffic from Station-A is randomly generated following Poisson distribution. That is, the inter-arrival time between packets is Poisson distributed and hence is of variable packet rate. The traffic shaper will queue the incoming packets from A and then “schedule” them at a constant bit rate towards Station-B. Thus the traffic between Station A and the Traffic Shaper is VBR, while between the Traffic Shaper and Station-B is CBR. The traffic shaper MUST be based on Token Bucket algorithm (see lecture slides)
+The queue inside the Traffic Shaper should be a FIFO queue with a fixed size and constant service time. Set the output rate of the Traffic Shaper to some constant value x pps (packets per second) while experiment with
+1. Different mean inter-arrival times from Station-A towards the Traffic Shaper.
+2. Different size of the token bucket (β) to control maximum burst size
+3. Different token rates (p)
